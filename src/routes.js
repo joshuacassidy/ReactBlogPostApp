@@ -4,6 +4,7 @@ import { Route, IndexRoute} from 'react-router';
 import App from './components/app';
 import PostsIndex from './components/posts_index';
 import PostsNew from './components/posts_new';
+import PostsShow from './components/posts_show';
 
 const Greeting = () => {
   return <div> Hey there </div>
@@ -26,6 +27,7 @@ export default (
     <Route path = "content" component={Content} />
     <Route path = "question" component={Question} />
     <Route path = "posts" component={PostsNew} />
-
+    <Route path="posts/:id" component={PostsShow}></Route>
+    //this.props.params.id
  </Route>
 );
